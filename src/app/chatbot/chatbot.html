@@ -1,0 +1,81 @@
+<div class="chatbot-container">
+  <div class="chatbot-header" *ngIf="showHeader">
+    <div class="header-content">
+      <div class="bot-avatar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z"/>
+          <path d="M19 15L19.83 18.83L23 19L19.83 19.17L19 23L18.17 19.17L15 19L18.17 18.83L19 15Z"/>
+          <path d="M8 7L8.5 9.5L11 10L8.5 10.5L8 13L7.5 10.5L5 10L7.5 9.5L8 7Z"/>
+        </svg>
+      </div>
+      <div class="header-text">
+        <h3>C-UAS Assistant</h3>
+        <p>Your expert guide to counter-drone technology</p>
+      </div>
+    </div>
+    <button class="clear-btn" (click)="clearChat()" title="Clear chat">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 6h18"/>
+        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="chat-messages" #messagesContainer>
+    <div class="message-wrapper" *ngFor="let message of messages; trackBy: trackByMessageId">
+      <div class="message" [class.user-message]="message.isUser" [class.bot-message]="!message.isUser">
+        <div class="message-avatar" *ngIf="!message.isUser">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z"/>
+          </svg>
+        </div>
+        <div class="message-content">
+          <div class="message-text" [innerHTML]="formatMessage(message.text)"></div>
+          <div class="message-time">{{ message.timestamp | date:'shortTime' }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="typing-indicator" *ngIf="isTyping">
+      <div class="message bot-message">
+        <div class="message-avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z"/>
+          </svg>
+        </div>
+        <div class="message-content">
+          <div class="typing-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-input-container">
+    <div class="input-wrapper">
+      <textarea
+        [(ngModel)]="newMessage"
+        (keydown)="onKeyPress($event)"
+        placeholder="Ask me about C-UAS products, compare systems, or get recommendations..."
+        rows="1"
+        class="chat-input"
+        [disabled]="isTyping"></textarea>
+      <button
+        class="send-btn"
+        (click)="sendMessage()"
+        [disabled]="!newMessage.trim() || isTyping">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22,2 15,22 11,13 2,9"/>
+        </svg>
+      </button>
+    </div>
+    <div class="input-hint">
+      Press Enter to send • Shift+Enter for new line
+    </div>
+  </div>
+</div>

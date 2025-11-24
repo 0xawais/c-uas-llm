@@ -1,0 +1,216 @@
+<div class="review-container">
+  
+  <!-- Introduction Step -->
+  <div *ngIf="currentStep === 'intro'" class="step intro-step">
+    <div class="header">
+      <h1>System Feedback Form</h1>
+      <p class="time-estimate">⏱️ Takes 1-2 minutes</p>
+    </div>
+    
+    <div class="intro-content">
+      <p class="purpose">
+        Your operational feedback directly impacts procurement decisions at the unit and battalion level. 
+        This brief survey helps ensure warfighters get the most effective c-UAS systems for their mission requirements.
+      </p>
+      
+      <div class="form-group">
+        <label for="systemName">
+          System Being Reviewed <span class="required">*</span>
+        </label>
+        <div class="autocomplete-wrapper" (clickOutside)="showProductDropdown = false">
+          <input 
+            type="text" 
+            id="systemName"
+            [(ngModel)]="systemName"
+            [disabled]="isProductPageReview"
+            (focus)="showProductDropdown = true"
+            (input)="showProductDropdown = true"
+            placeholder="Enter or select c-UAS system name"
+            class="input-field"
+            autocomplete="off"
+          />
+          <button 
+            *ngIf="!isProductPageReview"
+            type="button"
+            class="dropdown-toggle"
+            (click)="toggleProductDropdown()"
+            [class.active]="showProductDropdown"
+          >
+            <span class="dropdown-icon">▼</span>
+          </button>
+          
+          <div 
+            *ngIf="showProductDropdown && !isProductPageReview" 
+            class="dropdown-menu"
+          >
+            <div 
+              *ngFor="let product of filteredProducts"
+              class="dropdown-item"
+              (click)="selectProduct(product)"
+            >
+              <div class="product-name">{{ product.name }}</div>
+              <div class="product-details">
+                {{ product.manufacturer }} • {{ product.category }}
+              </div>
+            </div>
+            <div *ngIf="filteredProducts.length === 0" class="dropdown-item no-results">
+              No matching systems found
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button 
+        class="btn btn-primary"
+        [disabled]="!canProceedToReview"
+        (click)="startReview()"
+      >
+        Begin Review
+      </button>
+    </div>
+  </div>
+  
+  <!-- Review Step -->
+  <div *ngIf="currentStep === 'review'" class="step review-step">
+    <div class="header">
+      <h1>Reviewing: {{ systemName }}</h1>
+      <p class="subtitle">Rate each area and optionally provide details</p>
+    </div>
+    
+    <div class="review-form">
+      
+      <!-- Operator Experience Section -->
+      <section class="experience-section">
+        <h2>Your Experience</h2>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cuasExperience">
+              c-UAS System Experience <span class="required">*</span>
+            </label>
+            <select id="cuasExperience" [(ngModel)]="cuasExperience" class="input-field">
+              <option value="">Select...</option>
+              <option value="<3months">Less than 3 months</option>
+              <option value="3-6months">3-6 months</option>
+              <option value="6-12months">6-12 months</option>
+              <option value="1-2years">1-2 years</option>
+              <option value="2+years">2+ years</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="previousSystems">
+              Other c-UAS Systems Used (Optional)
+            </label>
+            <input 
+              type="text" 
+              id="previousSystems"
+              [(ngModel)]="previousSystems"
+              placeholder="e.g., DroneDefender, SkyWall"
+              class="input-field"
+            />
+          </div>
+        </div>
+      </section>
+      
+      <!-- Rating Categories -->
+      <section class="categories-section">
+        <h2>System Performance</h2>
+        
+        <div *ngFor="let category of categories" class="category-card">
+          <div class="category-header">
+            <h3>{{ category.title }}</h3>
+            <p class="category-description">{{ category.description }}</p>
+          </div>
+          
+          <div class="rating-section">
+            <label class="rating-label">
+              Rating <span class="required">*</span>
+            </label>
+            <div class="star-rating" [class.disabled]="category.notApplicable">
+              <span 
+                *ngFor="let star of [1, 2, 3, 4, 5]"
+                class="star"
+                [class.filled]="star <= category.rating"
+                [class.disabled]="category.notApplicable"
+                (click)="!category.notApplicable && setRating(category, star)"
+              >
+                ★
+              </span>
+            </div>
+            <div class="na-option">
+              <label class="na-checkbox">
+                <input 
+                  type="checkbox"
+                  [checked]="category.notApplicable"
+                  (change)="toggleNotApplicable(category)"
+                />
+                <span>Not Applicable to My Experience</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label [for]="'comment-' + category.id">
+              Additional Details (Optional)
+            </label>
+            <textarea
+              [id]="'comment-' + category.id"
+              [(ngModel)]="category.comment"
+              placeholder="Share specific examples or context..."
+              class="textarea-field"
+              rows="2"
+            ></textarea>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Additional Feedback Section -->
+      <section class="additional-feedback-section">
+        <h2>Additional Feedback</h2>
+        <div class="form-group">
+          <label for="additionalFeedback">
+            Anything else we should know? (Optional)
+          </label>
+          <textarea
+            id="additionalFeedback"
+            [(ngModel)]="additionalFeedback"
+            placeholder="Share any additional insights, concerns, or recommendations about this system..."
+            class="textarea-field"
+            rows="4"
+          ></textarea>
+          <p class="helper-text">
+            This could include operational context, specific scenarios, recommendations for improvement, or any other relevant information.
+          </p>
+        </div>
+      </section>
+      
+      <button 
+        class="btn btn-primary btn-submit"
+        [disabled]="!canSubmitReview"
+        (click)="submitReview()"
+      >
+        Submit Review
+      </button>
+      
+      <p *ngIf="!canSubmitReview" class="validation-message">
+        Please complete all required fields (marked with *)
+      </p>
+    </div>
+  </div>
+  
+  <!-- Completion Step -->
+  <div *ngIf="currentStep === 'complete'" class="step complete-step">
+    <div class="success-icon">✓</div>
+    <h1>Thank You!</h1>
+    <p class="thank-you-message">
+      Your feedback has been submitted and will directly contribute to improving c-UAS procurement 
+      decisions. Your operational insights help ensure units receive the most effective systems 
+      for their mission requirements.
+    </p>
+    <p class="secondary-message">
+      This window can now be closed.
+    </p>
+  </div>
+  
+</div>
