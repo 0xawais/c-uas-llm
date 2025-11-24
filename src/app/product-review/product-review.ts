@@ -5,11 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService, Product, CategoryRatings, Review } from '../product.service';
 import { GeminiService } from '../gemini.service';
+import { MarkdownToHtmlPipe } from '../newline-to-br.pipe';
 
 @Component({
   selector: 'app-product-review',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MarkdownToHtmlPipe],
   templateUrl: './product-review.html',
   styleUrls: ['./product-review.scss']
 })
@@ -29,6 +30,9 @@ export class ProductReviewComponent implements OnInit {
   reviewSummary: string = '';
   isGeneratingSummary: boolean = false;
   showSummary: boolean = false;
+  detailedSummary: string = '';
+  isGeneratingDetailed: boolean = false;
+  showDetailed: boolean = false;
   reviewsToShow: number = 5;
   
   // Review form properties
@@ -108,6 +112,20 @@ export class ProductReviewComponent implements OnInit {
     } finally {
       this.isGeneratingSummary = false;
       this.showSummary = true;
+    }
+  }
+
+  async generateDetailedReviewSummary(): Promise<void> {
+    this.isGeneratingDetailed = true;
+    try {
+      this.detailedSummary = await this.geminiService.generateDetailedReviewSummary(this.product!.name, this.reviews);
+      this.showDetailed = true;
+    } catch (error) {
+      this.detailedSummary = 'Unable to generate detailed summary. Please check your API key configuration.';
+      console.error('Error generating detailed summary:', error);
+      this.showDetailed = true;
+    } finally {
+      this.isGeneratingDetailed = false;
     }
   }
 

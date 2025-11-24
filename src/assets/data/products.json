@@ -4,6 +4,12 @@
       "id": 1,
       "name": "Roadrunner-M",
       "manufacturer": "Anduril Industries",
+      "manufacturer_contact": {
+        "email": "contact@anduril.com",
+        "phone": "+1 (949) 555-0101",
+        "website": "https://www.anduril.com",
+        "address": "1375 Sunflower Ave, Costa Mesa, CA 92626"
+      },
       "category": "Air Defense Interceptor",
       "price": "Contact for Pricing",
       "image": "https://cdn.sanity.io/images/z5s3oquj/production/cb086dde298ee0705a8a4afad32741324e8997cf-1075x1433.jpg?auto=format&fit=max&w=640&q=90",
@@ -25,6 +31,12 @@
       "id": 2,
       "name": "DroneBuster",
       "manufacturer": "DZYNE Technologies",
+      "manufacturer_contact": {
+        "email": "info@dzyne.com",
+        "phone": "+1 (703) 555-0102",
+        "website": "https://www.dzyne.com",
+        "address": "8260 Willow Oaks Corporate Dr, Fairfax, VA 22031"
+      },
       "category": "Counter-UAS System",
       "price": "Contact for Pricing",
       "image": "https://dzyne.com/wp-content/uploads/2025/10/9.2025-CMG-Dzyne-WR-105-1536x1024.jpg",
@@ -46,6 +58,12 @@
       "id": 3,
       "name": "Beast+",
       "manufacturer": "CACI International",
+      "manufacturer_contact": {
+        "email": "solutions@caci.com",
+        "phone": "+1 (703) 555-0103",
+        "website": "https://www.caci.com",
+        "address": "1100 N Glebe Rd, Arlington, VA 22201"
+      },
       "category": "Multi-Channel SIGINT Receiver",
       "price": "Contact for Pricing",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6q3tqBaE1JmdZYa1453TR6_rqkFla2hNHQ&s",
@@ -67,6 +85,12 @@
       "id": 4,
       "name": "SilentGuardian EW-300",
       "manufacturer": "TacticalWave Systems",
+      "manufacturer_contact": {
+        "email": "sales@tacticalwave.com",
+        "phone": "+1 (408) 555-0104",
+        "website": "https://www.tacticalwave.com",
+        "address": "4500 Great America Pkwy, Santa Clara, CA 95054"
+      },
       "category": "Electronic Warfare",
       "price": "$89,500",
       "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=640&q=80",
@@ -88,6 +112,12 @@
       "id": 5,
       "name": "PhantomNet Disruptor",
       "manufacturer": "Aegis Defense Technologies",
+      "manufacturer_contact": {
+        "email": "contact@aegisdefense.com",
+        "phone": "+1 (202) 555-0105",
+        "website": "https://www.aegisdefense.com",
+        "address": "1000 Defense Pentagon, Washington, DC 20301"
+      },
       "category": "Electronic Warfare",
       "price": "$124,000",
       "image": "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=640&q=80",
@@ -109,6 +139,12 @@
       "id": 6,
       "name": "Wavebreaker Pro",
       "manufacturer": "Sentinel Electronic Systems",
+      "manufacturer_contact": {
+        "email": "support@sentinelelec.com",
+        "phone": "+1 (512) 555-0106",
+        "website": "https://www.sentinelelec.com",
+        "address": "123 Tech Blvd, Austin, TX 78701"
+      },
       "category": "Electronic Warfare",
       "price": "$67,900",
       "description": "Compact counter-drone and communications jamming system optimized for fixed-site protection of critical infrastructure. Employs intelligent frequency hopping detection and selective jamming to minimize collateral interference while maximizing threat neutralization.",
@@ -130,6 +166,12 @@
       "id": 7,
       "name": "SpectrumHawk X7",
       "manufacturer": "Vanguard Communications Defense",
+      "manufacturer_contact": {
+        "email": "info@vanguarddef.com",
+        "phone": "+1 (310) 555-0107",
+        "website": "https://www.vanguarddef.com",
+        "address": "500 Aerospace Way, El Segundo, CA 90245"
+      },
       "category": "Electronic Warfare",
       "price": "$156,000",
       "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=640&q=80",
@@ -151,6 +193,12 @@
       "id": 8,
       "name": "StormShield Mobile EW Suite",
       "manufacturer": "Fortress Electronic Warfare",
+      "manufacturer_contact": {
+        "email": "sales@fortressew.com",
+        "phone": "+1 (858) 555-0108",
+        "website": "https://www.fortressew.com",
+        "address": "9876 Cyber Dr, San Diego, CA 92121"
+      },
       "category": "Electronic Warfare",
       "price": "$198,500",
       "image": "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=640&q=80",

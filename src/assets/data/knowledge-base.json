@@ -1,0 +1,740 @@
+{
+  "metadata": {
+    "title": "C-UAS Product Knowledge Base",
+    "description": "Comprehensive knowledge base for Counter-Unmanned Aerial Systems (C-UAS) products and technologies",
+    "version": "1.0",
+    "lastUpdated": "2025-11-24",
+    "domain": "Defense Technology - Counter-Drone Systems",
+    "totalProducts": 8,
+    "categories": ["Air Defense Interceptor", "Counter-UAS System", "Multi-Channel SIGINT Receiver", "Electronic Warfare"]
+  },
+  "products": {
+    "Roadrunner-M": {
+      "id": 1,
+      "weight": "280 lbs (127 kg)",
+      "carryingCapacity": "Requires specialized launch platform - NOT portable for individual soldiers. Requires ground-based launcher installation with 4-person crew",
+      "manufacturer": "Anduril Industries",
+      "manufacturer_contact": {
+        "email": "contact@anduril.com",
+        "phone": "+1 (949) 555-0101",
+        "website": "https://www.anduril.com",
+        "address": "1375 Sunflower Ave, Costa Mesa, CA 92626"
+      },
+      "category": "Air Defense Interceptor",
+      "price": "Contact for Pricing",
+      "description": "Revolutionary recoverable ground-based air defense interceptor. Twin-jet powered VTOL autonomous air vehicle capable of high subsonic speeds and high-G maneuvers. Features a high-explosive warhead for destroying aerial threats including UAS, cruise missiles, and low-flying aircraft. Uniquely reusable - can return to base, land vertically, refuel, and relaunch in minutes if not deployed against a target.",
+      "keyFeatures": [
+        "VTOL (Vertical Take-Off and Landing) capability",
+        "Twin turbojet engines with thrust vectoring",
+        "High subsonic speed capability",
+        "Reusable design with quick turnaround",
+        "Autonomous target tracking and interception",
+        "Integrated with Lattice AI command and control"
+      ],
+      "specifications": {
+        "dimensions": "Approximately 6 feet (1.5m) in length",
+        "propulsion": "Twin turbojet engines",
+        "speed": "High subsonic",
+        "maneuverability": "High-G force capable",
+        "landing": "Four flip-down outriggers",
+        "refuelTime": "Minutes (not hours)",
+        "integration": "Compatible with existing air defense architectures",
+        "weight": "280 lbs (127 kg) - complete system including warhead",
+        "carryingCapacity": "Requires specialized launch platform - NOT portable for individual soldiers. Requires ground-based launcher installation with 4-person crew"
+      },
+      "operationSteps": [
+        "1. Position Roadrunner-M on the launch platform with four outriggers secured",
+        "2. Verify fuel level and warhead arming status via Lattice AI interface",
+        "3. Connect ground power unit for pre-flight diagnostics (5 minutes)",
+        "4. Enable autonomous mode and confirm target data from air defense network",
+        "5. Monitor launch sequence on control station - system will auto-orient for vertical takeoff",
+        "6. After launch, monitor via Lattice AI for target acquisition and engagement",
+        "7. If recovered, prepare landing zone and perform post-flight inspection",
+        "8. Refuel and rearm for next deployment cycle"
+      ],
+      "useCases": [
+        "Ground-based air defense",
+        "UAS interception",
+        "Cruise missile defense",
+        "Low-flying aircraft threats",
+        "Autonomous defense operations"
+      ],
+      "strengths": [
+        "Reusable - significant cost savings",
+        "High maneuverability",
+        "Autonomous operation",
+        "Quick deployment cycle",
+        "Multi-threat capable"
+      ],
+      "limitations": [
+        "Ground-based deployment only",
+        "Requires prepared launch sites",
+        "High unit cost"
+      ],
+      "targetThreats": ["UAS", "Cruise missiles", "Low-flying aircraft"],
+      "deploymentType": "Ground-based",
+      "mobility": "Fixed installation with VTOL capability"
+    },
+    "DroneBuster": {
+      "id": 2,
+      "weight": "4.1 lbs (1.86 kg) with battery and antenna",
+      "carryingCapacity": "Single soldier can carry - designed for individual operator. Fits in tactical vest or backpack",
+      "manufacturer": "DZYNE Technologies",
+      "manufacturer_contact": {
+        "email": "info@dzyne.com",
+        "phone": "+1 (703) 555-0102",
+        "website": "https://www.dzyne.com",
+        "address": "8260 Willow Oaks Corporate Dr, Fairfax, VA 22031"
+      },
+      "category": "Counter-UAS System",
+      "price": "Contact for Pricing",
+      "description": "Combat-proven, handheld Counter-UAS system with more than 2,500 units deployed worldwide. Designed for soldier-level defense, it enables operators to detect, identify, and defeat hostile drones in real time. As the only American-made handheld C-sUAS with optional PNT Attack (GNSS spoofing), DroneBuster delivers unmatched tactical flexibility for U.S. and allied forces.",
+      "keyFeatures": [
+        "Handheld, portable design",
+        "AI/ML-powered drone identification",
+        "PNT Attack (GNSS spoofing) capability",
+        "Real-time detection and identification",
+        "Continuously updated drone library",
+        "Remote ID & Aeroscope integration"
+      ],
+      "specifications": {
+        "detectionRange": "Up to 7 km",
+        "frequencyRange": "400 MHz–6 GHz",
+        "powerSource": "Battery operated",
+        "display": "Built-in LCD display",
+        "alerts": "Haptic, aural, and visual",
+        "antennas": "Omnidirectional",
+        "deploymentCount": "2,500+ units globally",
+        "weight": "3.2 lbs (1.45 kg) without battery, 4.1 lbs (1.86 kg) with battery and antenna",
+        "carryingCapacity": "Single soldier can carry - designed for individual operator. Fits in tactical vest or backpack"
+      },
+      "operationSteps": [
+        "1. Power on DroneBuster using the side power switch",
+        "2. Allow 30 seconds for system boot-up and sensor initialization",
+        "3. Antenna will auto-calibrate - ensure clear 360-degree line of sight",
+        "4. Select detection mode from LCD menu (Full Spectrum, Drone-Only, or Targeted)",
+        "5. Adjust sensitivity level based on environment (Urban=Low, Remote=High)",
+        "6. Monitor LCD display for threats - color coding: Green=Safe, Yellow=Possible Threat, Red=Hostile Drone",
+        "7. Upon detection, hold device steady and note direction on compass bearing",
+        "8. If GNSS attack enabled, activate spoofing mode after confirming hostile intent",
+        "9. Log all detections and times for post-operation analysis",
+        "10. Recharge battery after 6-8 hours of operation using tactical charging kit"
+      ],
+      "useCases": [
+        "Individual soldier defense",
+        "Tactical unit protection",
+        "Convoy security",
+        "Base defense",
+        "Special operations",
+        "GNSS spoofing operations"
+      ],
+      "strengths": [
+        "Highly portable and lightweight",
+        "Proven combat effectiveness",
+        "Wide deployment worldwide",
+        "AI-powered identification",
+        "GNSS spoofing capability",
+        "Real-time operation"
+      ],
+      "limitations": [
+        "Limited to individual operator range",
+        "Battery dependent",
+        "Requires operator training"
+      ],
+      "targetThreats": ["Hostile drones", "UAS"],
+      "deploymentType": "Handheld/Man-portable",
+      "mobility": "Individual soldier carried"
+    },
+    "Beast+": {
+      "id": 3,
+      "weight": "4.0 lbs (1.8 kg) with battery",
+      "carryingCapacity": "Single soldier can carry in load-bearing equipment or messenger bag. Compact form factor approximately the size of a military radio",
+      "manufacturer": "CACI International",
+      "manufacturer_contact": {
+        "email": "solutions@caci.com",
+        "phone": "+1 (703) 555-0103",
+        "website": "https://www.caci.com",
+        "address": "1100 N Glebe Rd, Arlington, VA 22201"
+      },
+      "category": "Multi-Channel SIGINT Receiver",
+      "price": "Contact for Pricing",
+      "description": "Dismount multi-channel receiver that builds upon the battle-proven Beast platform with the addition of a third receive channel and transmit capabilities. Supports detection, direction finding (DF), and electronic attack of adversary signals. This multi-function device performs survey, drive test, and surveillance of multiple push-to-talk and cellular protocols.",
+      "keyFeatures": [
+        "3 simultaneous receive channels",
+        "16 simultaneous demodulators",
+        "Electronic attack (EA) capabilities",
+        "80 MHz instantaneous bandwidth per channel",
+        "Dedicated transmit port for jamming",
+        "ATAK integration via Reaper plug-in"
+      ],
+      "specifications": {
+        "channels": "3 simultaneous receive",
+        "demodulators": "16 simultaneous",
+        "bandwidth": "80 MHz per channel",
+        "frequencyRange": "500 kHz – 6 GHz",
+        "batteryLife": "~8 hours",
+        "weight": "<4.0 lbs with battery",
+        "durability": "MIL-STD-810G",
+        "compatibility": "PRC-148/152 and 2590/5590 batteries",
+        "carryingCapacity": "Single soldier can carry in load-bearing equipment or messenger bag. Compact form factor approximately the size of a military radio"
+      },
+      "operationSteps": [
+        "1. Insert compatible battery and power on using center button",
+        "2. Connect appropriate antenna configuration for frequency range of interest",
+        "3. Select three receive channels using touchscreen interface (Channel 1, 2, 3)",
+        "4. Set frequency range for each channel - common protocols pre-programmed",
+        "5. Enable direction finding (DF) - align antenna with target signal",
+        "6. Monitor signal strength indicators on display for triangulation",
+        "7. Engage electronic attack if authorized - select jamming profile for specific protocol",
+        "8. Use Reaper ATAK plug-in to share DF data with tactical operations center",
+        "9. Monitor demodulator output on screen - 16 simultaneous signals tracked",
+        "10. Log all signal intercepts with GPS coordinates and timestamps",
+        "11. Battery swap procedure: Turn off, replace battery, power on (takes 5 seconds)"
+      ],
+      "useCases": [
+        "Signals intelligence (SIGINT)",
+        "Direction finding (DF)",
+        "Electronic attack operations",
+        "Communications surveillance",
+        "Push-to-talk protocol monitoring",
+        "Cellular network analysis",
+        "Drive testing",
+        "Electronic warfare support"
+      ],
+      "strengths": [
+        "Multi-channel simultaneous operation",
+        "Rugged military design",
+        "Long battery life",
+        "ATAK integration",
+        "Electronic attack capabilities",
+        "Wide frequency coverage"
+      ],
+      "limitations": [
+        "Requires technical expertise",
+        "Limited to SIGINT operations",
+        "Battery dependent"
+      ],
+      "targetThreats": ["Adversary communications", "Cellular networks", "Push-to-talk systems"],
+      "deploymentType": "Man-portable",
+      "mobility": "Dismount soldier carried"
+    },
+    "SilentGuardian EW-300": {
+      "id": 4,
+      "weight": "420 lbs (190 kg)",
+      "carryingCapacity": "NOT portable - requires full vehicle installation. Requires crew of 2: one operator and one system administrator",
+      "manufacturer": "TacticalWave Systems",
+      "manufacturer_contact": {
+        "email": "sales@tacticalwave.com",
+        "phone": "+1 (408) 555-0104",
+        "website": "https://www.tacticalwave.com",
+        "address": "4500 Great America Pkwy, Santa Clara, CA 95054"
+      },
+      "category": "Electronic Warfare",
+      "price": "$89,500",
+      "description": "Advanced vehicular-mounted electronic warfare system designed for wide-spectrum signal detection and neutralization. Features adaptive jamming algorithms and AI-driven threat analysis to counter evolving adversary communications and drone control systems in real-time.",
+      "keyFeatures": [
+        "Adaptive jamming algorithms",
+        "AI-powered threat classification",
+        "360-degree omnidirectional coverage",
+        "Automated threat prioritization",
+        "Vehicle integration kit",
+        "Real-time spectrum monitoring",
+        "GPS spoofing capabilities"
+      ],
+      "specifications": {
+        "frequencyRange": "20 MHz – 18 GHz",
+        "outputPower": "500W jamming",
+        "coverage": "360-degree omnidirectional",
+        "effectiveRange": "Up to 5 km",
+        "platform": "Vehicular-mounted",
+        "compliance": "MIL-STD-461",
+        "threatAnalysis": "AI-driven",
+        "weight": "420 lbs (190 kg) - complete system with antennas and power supply",
+        "carryingCapacity": "NOT portable - requires full vehicle installation. Requires crew of 2: one operator and one system administrator"
+      },
+      "operationSteps": [
+        "1. Mount system on vehicle using provided rack-mount brackets (requires 4 crew members, 20 minutes)",
+        "2. Connect power harness to vehicle alternator/power management system",
+        "3. Install omnidirectional antenna array on vehicle roof (4 main antennas)",
+        "4. Boot up control console and perform system diagnostics (5 minutes)",
+        "5. Calibrate threat detection AI by scanning local electromagnetic environment",
+        "6. Establish communication with tactical operations center via secure link",
+        "7. Enable real-time spectrum monitoring mode - system auto-detects threats",
+        "8. Operator monitors threat display and activates jamming profiles as needed",
+        "9. For convoy movement: maintain 50-meter spacing with front scout vehicle",
+        "10. System automatically prioritizes threats using AI algorithm",
+        "11. Monitor power consumption (vehicle must run continuously during operations)",
+        "12. After mission: shutdown procedure takes 3 minutes for safe deactivation of jamming circuits"
+      ],
+      "useCases": [
+        "Convoy protection",
+        "Mobile operations",
+        "Base defense",
+        "Communications jamming",
+        "Drone control signal neutralization",
+        "Spectrum dominance operations"
+      ],
+      "strengths": [
+        "Wide frequency coverage",
+        "AI-powered threat analysis",
+        "Adaptive jamming",
+        "Vehicular mobility",
+        "360-degree coverage",
+        "Automated operation"
+      ],
+      "limitations": [
+        "Vehicle-dependent deployment",
+        "High power consumption",
+        "Requires vehicle integration"
+      ],
+      "targetThreats": ["Adversary communications", "Drone control systems", "Radar systems"],
+      "deploymentType": "Vehicular-mounted",
+      "mobility": "Vehicle-mobile"
+    },
+    "PhantomNet Disruptor": {
+      "id": 5,
+      "weight": "25 lbs (11.3 kg)",
+      "carryingCapacity": "Single soldier can carry as backpack system or two soldiers can share load. Weight distributed across backpack frame",
+      "manufacturer": "Aegis Defense Technologies",
+      "manufacturer_contact": {
+        "email": "contact@aegisdefense.com",
+        "phone": "+1 (202) 555-0105",
+        "website": "https://www.aegisdefense.com",
+        "address": "1000 Defense Pentagon, Washington, DC 20301"
+      },
+      "category": "Electronic Warfare",
+      "price": "$124,000",
+      "description": "Man-portable electronic warfare suite combining SIGINT, direction finding, and targeted jamming capabilities. Designed for special operations and rapid deployment scenarios, providing comprehensive electromagnetic spectrum dominance in a lightweight package.",
+      "keyFeatures": [
+        "Backpack portable design",
+        "Dual-band simultaneous operation",
+        "Direction finding capabilities",
+        "Touch-screen control interface",
+        "Encrypted data links",
+        "Modular antenna system"
+      ],
+      "specifications": {
+        "weight": "25 lbs (11.3 kg) complete system",
+        "batteryLife": "6-8 hours",
+        "dfAccuracy": "±2 degrees",
+        "frequencyRange": "30 MHz – 6 GHz",
+        "deploymentTime": "<5 minutes",
+        "interface": "Touch-screen",
+        "integration": "Blue Force Tracker compatible",
+        "carryingCapacity": "Single soldier can carry as backpack system or two soldiers can share load. Weight distributed across backpack frame"
+      },
+      "operationSteps": [
+        "1. Don backpack and secure all straps for stable carry during operations",
+        "2. Deploy antenna mast - extend to full height (approximately 2 meters) and lock",
+        "3. Power on main control unit using power button on chest pack",
+        "4. Wait for system boot and GPS lock (approximately 45 seconds)",
+        "5. Select mission mode on touch screen: SIGINT mode or Direction Finding mode",
+        "6. Enable dual-band simultaneous operation if tracking multiple frequencies",
+        "7. Calibrate heading using compass heading input or auto-calibrate with GPS",
+        "8. For direction finding: rotate slowly 360 degrees while monitoring DF display",
+        "9. Peak signal strength indicates direction to target - note bearing",
+        "10. Encrypt all data links and establish Blue Force Tracker connection",
+        "11. Transmit DF results and SIGINT findings to tactical operations center",
+        "12. Battery status monitored continuously - prepare for battery swap at 20% capacity",
+        "13. To pack down: retract antenna, place in transport bag, secure backpack straps"
+      ],
+      "useCases": [
+        "Special operations",
+        "Rapid deployment scenarios",
+        "SIGINT operations",
+        "Direction finding",
+        "Targeted jamming",
+        "Spectrum dominance",
+        "Reconnaissance support"
+      ],
+      "strengths": [
+        "Lightweight and portable",
+        "Dual-band operation",
+        "High DF accuracy",
+        "Quick deployment",
+        "Touch-screen interface",
+        "Encrypted communications"
+      ],
+      "limitations": [
+        "Limited battery life",
+        "Requires operator expertise",
+        "Backpack weight may limit mobility"
+      ],
+      "targetThreats": ["Adversary communications", "Electronic signals"],
+      "deploymentType": "Man-portable",
+      "mobility": "Backpack carried"
+    },
+    "Wavebreaker Pro": {
+      "id": 6,
+      "weight": "340 lbs (154 kg)",
+      "carryingCapacity": "NOT portable - requires stationary installation. Needs 2-3 personnel for initial setup, then minimal 1-person operation afterward",
+      "manufacturer": "Sentinel Electronic Systems",
+      "manufacturer_contact": {
+        "email": "support@sentinelelec.com",
+        "phone": "+1 (512) 555-0106",
+        "website": "https://www.sentinelelec.com",
+        "address": "123 Tech Blvd, Austin, TX 78701"
+      },
+      "category": "Electronic Warfare",
+      "price": "$67,900",
+      "description": "Compact counter-drone and communications jamming system optimized for fixed-site protection of critical infrastructure. Employs intelligent frequency hopping detection and selective jamming to minimize collateral interference while maximizing threat neutralization.",
+      "keyFeatures": [
+        "Fixed or semi-mobile deployment",
+        "Multi-target tracking",
+        "Selective frequency jamming",
+        "Low probability of intercept mode",
+        "Weatherproof enclosure",
+        "Remote operation via web interface"
+      ],
+      "specifications": {
+        "coverageRadius": "2.5 km",
+        "maxTargets": "30 simultaneous",
+        "frequencyBands": "400 MHz – 5.8 GHz",
+        "powerConsumption": "350W",
+        "enclosure": "IP67 weatherproof",
+        "interface": "Secure web interface",
+        "operation": "Remote capable",
+        "weight": "340 lbs (154 kg) - complete fixed installation with all components",
+        "carryingCapacity": "NOT portable - requires stationary installation. Needs 2-3 personnel for initial setup, then minimal 1-person operation afterward"
+      },
+      "operationSteps": [
+        "1. Position system at fixed-site location with clear 360-degree RF exposure",
+        "2. Install weatherproof enclosure on mounting pole or building structure",
+        "3. Mount antenna array with clear line of sight to coverage area (typically 2.5 km radius)",
+        "4. Connect power (110/220V AC) and establish backup battery power (UPS system)",
+        "5. Connect secure network link to command center for remote access",
+        "6. Initialize system - automatic frequency sweep takes 10 minutes",
+        "7. Configure threat detection parameters: drone signatures loaded, frequency bands set",
+        "8. Enable selective jamming mode - system learns friendly communications patterns",
+        "9. Set automatic threat prioritization - 30 targets can be tracked simultaneously",
+        "10. Remote operators access via secure web interface from command center",
+        "11. System continuously monitors specified frequency bands 24/7",
+        "12. Upon threat detection: system automatically engages jamming if authorized",
+        "13. Log all events with timestamps for post-incident analysis",
+        "14. Maintenance: Check antenna connections monthly, clean RF windows seasonally"
+      ],
+      "useCases": [
+        "Critical infrastructure protection",
+        "Fixed-site defense",
+        "Drone countermeasures",
+        "Communications jamming",
+        "Infrastructure security",
+        "Border protection"
+      ],
+      "strengths": [
+        "Multi-target capability",
+        "Selective jamming (minimizes interference)",
+        "Weatherproof design",
+        "Remote operation",
+        "Low power consumption",
+        "Infrastructure optimized"
+      ],
+      "limitations": [
+        "Fixed deployment limits mobility",
+        "Limited range compared to mobile systems",
+        "Requires infrastructure setup"
+      ],
+      "targetThreats": ["Drones", "Hostile communications"],
+      "deploymentType": "Fixed-site",
+      "mobility": "Semi-mobile"
+    },
+    "SpectrumHawk X7": {
+      "id": 7,
+      "weight": "45 lbs (20.4 kg)",
+      "carryingCapacity": "NOT portable on foot - pod must be installed on helicopter/UAV airframe. Requires aircraft maintenance crew of 4 for installation (30 minutes)",
+      "manufacturer": "Vanguard Communications Defense",
+      "manufacturer_contact": {
+        "email": "info@vanguarddef.com",
+        "phone": "+1 (310) 555-0107",
+        "website": "https://www.vanguarddef.com",
+        "address": "500 Aerospace Way, El Segundo, CA 90245"
+      },
+      "category": "Electronic Warfare",
+      "price": "$156,000",
+      "description": "Next-generation airborne electronic warfare pod designed for helicopter and UAV integration. Provides persistent area denial against hostile drones, communications, and radar systems with software-defined radio architecture for rapid mission reconfiguration.",
+      "keyFeatures": [
+        "Airborne platform compatible",
+        "Software-defined radio (SDR) core",
+        "Programmable waveform generation",
+        "Real-time mission updates",
+        "Dual redundant systems",
+        "Tactical mesh network integration"
+      ],
+      "specifications": {
+        "weight": "45 lbs (pod configuration, 20.4 kg); 15 lbs (10 kg) for control unit",
+        "frequencyRange": "100 MHz – 20 GHz",
+        "platformCompatibility": "Helicopter and UAV",
+        "operatingAltitude": "Up to 15,000 ft",
+        "effectiveRange": "8 km ground targets",
+        "architecture": "Software-defined radio",
+        "redundancy": "Dual systems",
+        "carryingCapacity": "NOT portable on foot - pod must be installed on helicopter/UAV airframe. Requires aircraft maintenance crew of 4 for installation (30 minutes)"
+      },
+      "operationSteps": [
+        "1. Schedule maintenance crew to mount pod on helicopter hardpoint (2 main attachment points)",
+        "2. Install pod securely and perform pre-flight structural verification",
+        "3. Connect power umbilical from aircraft electrical system to pod",
+        "4. Load mission software profile via ground control station (GCS) - takes 5 minutes",
+        "5. Perform pod diagnostic tests - self-test procedures run automatically",
+        "6. Brief pilot on operational altitude and tactical area boundaries",
+        "7. During flight: activate pod sensors at cruise altitude for signal detection",
+        "8. Mission controller at GCS operates pod and directs aircraft for optimal coverage",
+        "9. Software-defined radio core enables real-time mission reconfiguration in flight",
+        "10. Dual redundant systems ensure operation if one channel fails",
+        "11. Tactical mesh network integration allows data sharing with ground units",
+        "12. Deploy jamming waveforms as authorized by tactical commander",
+        "13. Log all actions for post-mission analysis and threat assessments",
+        "14. After landing: secure pod power and transmit data via secure link to command center"
+      ],
+      "useCases": [
+        "Airborne electronic warfare",
+        "Helicopter-based operations",
+        "UAV integration",
+        "Area denial operations",
+        "Communications suppression",
+        "Radar countermeasures"
+      ],
+      "strengths": [
+        "Airborne deployment advantage",
+        "Wide frequency coverage",
+        "Software-defined flexibility",
+        "High altitude operation",
+        "Dual redundancy",
+        "Real-time updates"
+      ],
+      "limitations": [
+        "Platform-dependent (requires aircraft)",
+        "High altitude limitations",
+        "Complex integration requirements"
+      ],
+      "targetThreats": ["Hostile drones", "Communications", "Radar systems"],
+      "deploymentType": "Airborne",
+      "mobility": "Aircraft-dependent"
+    },
+    "StormShield Mobile EW Suite": {
+      "id": 8,
+      "weight": "580 lbs (263 kg)",
+      "carryingCapacity": "NOT portable - requires vehicle platform (typically HMMWV or larger). Requires 3-4 personnel for installation (45 minutes), then 2-person crew during operations",
+      "manufacturer": "Fortress Electronic Warfare",
+      "manufacturer_contact": {
+        "email": "sales@fortressew.com",
+        "phone": "+1 (858) 555-0108",
+        "website": "https://www.fortressew.com",
+        "address": "9876 Cyber Dr, San Diego, CA 92121"
+      },
+      "category": "Electronic Warfare",
+      "price": "$198,500",
+      "description": "Ruggedized all-in-one electronic warfare platform built for convoy protection and mobile operations. Combines signals intelligence, electronic attack, and cyber-electronic warfare capabilities in a vehicle-integrated system with autonomous threat response.",
+      "keyFeatures": [
+        "Full-spectrum EW capabilities",
+        "Vehicle rack-mount system",
+        "Autonomous threat detection",
+        "Multi-function phased array antennas",
+        "Cyber-EW integration",
+        "Network-centric warfare compatible"
+      ],
+      "specifications": {
+        "capabilities": "Full-spectrum EW",
+        "mounting": "Vehicle rack-mount",
+        "frequencyRange": "10 MHz – 40 GHz",
+        "powerOutput": "1000W jamming",
+        "operation": "Autonomous threat response",
+        "crewSize": "2 operators maximum",
+        "cooling": "Integrated cooling system",
+        "weight": "580 lbs (263 kg) - complete integrated system with all components",
+        "carryingCapacity": "NOT portable - requires vehicle platform (typically HMMWV or larger). Requires 3-4 personnel for installation (45 minutes), then 2-person crew during operations"
+      },
+      "operationSteps": [
+        "1. Select vehicle platform - must be HMMWV or equivalent with power generation capacity",
+        "2. Perform vehicle integration: install rack-mount system in vehicle bed or cargo area",
+        "3. Connect integrated cooling system - ensure heat dissipation pathway is clear",
+        "4. Establish electrical connections to vehicle power (requires 100A circuit)",
+        "5. Install multi-function phased array antennas on vehicle roof using reinforced mounts",
+        "6. Boot up main control console and run diagnostics (10 minutes)",
+        "7. Perform full-spectrum calibration - system scans all frequencies from 10 MHz to 40 GHz",
+        "8. Operator #1 monitors threat detection display; Operator #2 manages network and cyber-EW",
+        "9. Enable autonomous threat response - system will automatically engage threats if authorized",
+        "10. For convoy movement: position system with 100-meter spacing from other vehicles",
+        "11. Continuous monitoring of electromagnetic spectrum with 1000W jamming output available",
+        "12. Network-centric warfare integration: shares data with command center in real-time",
+        "13. Cyber-EW capabilities: can disrupt enemy network communications if authorized",
+        "14. System requires continuous vehicle operation - fuel consumption approximately 15 GPH",
+        "15. Mission completion: safe shutdown of all jamming circuits (5 minutes) before vehicle movement"
+      ],
+      "useCases": [
+        "Convoy protection",
+        "Mobile operations",
+        "Signals intelligence",
+        "Electronic attack",
+        "Cyber-electronic warfare",
+        "Network-centric operations"
+      ],
+      "strengths": [
+        "Full-spectrum capabilities",
+        "Autonomous operation",
+        "High power output",
+        "Vehicle integration",
+        "Cyber-EW capabilities",
+        "Comprehensive EW suite"
+      ],
+      "limitations": [
+        "High cost",
+        "Requires vehicle platform",
+        "Complex system requiring trained operators"
+      ],
+      "targetThreats": ["All electromagnetic threats", "Communications", "Cyber systems"],
+      "deploymentType": "Vehicular",
+      "mobility": "Vehicle-mobile"
+    }
+  },
+  "categories": {
+    "Air Defense Interceptor": {
+      "description": "Systems designed to physically intercept and destroy aerial threats",
+      "products": ["Roadrunner-M"],
+      "keyCharacteristics": ["Kinetic interception", "High-speed engagement", "Reusable platforms"],
+      "typicalUse": "Active defense against aerial threats"
+    },
+    "Counter-UAS System": {
+      "description": "Dedicated systems for detecting, identifying, and neutralizing unmanned aerial systems",
+      "products": ["DroneBuster"],
+      "keyCharacteristics": ["Drone-specific detection", "Handheld operation", "Real-time identification"],
+      "typicalUse": "Tactical drone defense"
+    },
+    "Multi-Channel SIGINT Receiver": {
+      "description": "Signals intelligence receivers capable of monitoring multiple communication channels simultaneously",
+      "products": ["Beast+"],
+      "keyCharacteristics": ["Multi-channel reception", "Direction finding", "Electronic attack"],
+      "typicalUse": "Electronic warfare support and signals intelligence"
+    },
+    "Electronic Warfare": {
+      "description": "Systems that detect, disrupt, or destroy enemy electromagnetic signals and communications",
+      "products": ["SilentGuardian EW-300", "PhantomNet Disruptor", "Wavebreaker Pro", "SpectrumHawk X7", "StormShield Mobile EW Suite"],
+      "keyCharacteristics": ["Signal jamming", "Spectrum monitoring", "Electronic attack", "Communications disruption"],
+      "typicalUse": "Electromagnetic spectrum dominance"
+    }
+  },
+  "manufacturers": {
+    "Anduril Industries": {
+      "headquarters": "Irvine, California, USA",
+      "focus": "Defense technology, AI-powered defense systems",
+      "products": ["Roadrunner-M"],
+      "notableFeatures": ["Lattice AI integration", "Reusable interceptor technology"]
+    },
+    "DZYNE Technologies": {
+      "headquarters": "Irvine, California, USA",
+      "focus": "Counter-drone technology",
+      "products": ["DroneBuster"],
+      "notableFeatures": ["Handheld C-sUAS systems", "GNSS spoofing capabilities"]
+    },
+    "CACI International": {
+      "headquarters": "Arlington, Virginia, USA",
+      "focus": "Information technology and defense solutions",
+      "products": ["Beast+"],
+      "notableFeatures": ["SIGINT systems", "ATAK integration"]
+    },
+    "TacticalWave Systems": {
+      "headquarters": "San Diego, California, USA",
+      "focus": "Electronic warfare systems",
+      "products": ["SilentGuardian EW-300"],
+      "notableFeatures": ["Vehicular EW systems", "AI-driven threat analysis"]
+    },
+    "Aegis Defense Technologies": {
+      "headquarters": "Orlando, Florida, USA",
+      "focus": "Electronic warfare and countermeasures",
+      "products": ["PhantomNet Disruptor"],
+      "notableFeatures": ["Man-portable EW suites", "Special operations focus"]
+    },
+    "Sentinel Electronic Systems": {
+      "headquarters": "Austin, Texas, USA",
+      "focus": "Critical infrastructure protection",
+      "products": ["Wavebreaker Pro"],
+      "notableFeatures": ["Fixed-site protection", "Selective jamming"]
+    },
+    "Vanguard Communications Defense": {
+      "headquarters": "Chantilly, Virginia, USA",
+      "focus": "Communications defense and electronic warfare",
+      "products": ["SpectrumHawk X7"],
+      "notableFeatures": ["Airborne EW pods", "Software-defined radio"]
+    },
+    "Fortress Electronic Warfare": {
+      "headquarters": "Columbia, Maryland, USA",
+      "focus": "Comprehensive electronic warfare solutions",
+      "products": ["StormShield Mobile EW Suite"],
+      "notableFeatures": ["Full-spectrum EW", "Autonomous operation"]
+    }
+  },
+  "technicalSpecifications": {
+    "frequencyRanges": {
+      "low": "10-500 MHz",
+      "medium": "500 MHz - 6 GHz",
+      "high": "6-20 GHz",
+      "ultraHigh": "20-40 GHz"
+    },
+    "powerOutputs": {
+      "handheld": "Up to 50W",
+      "manPortable": "50-500W",
+      "vehicular": "500-1000W",
+      "fixedSite": "350-1000W"
+    },
+    "ranges": {
+      "handheld": "Up to 7 km",
+      "vehicular": "Up to 5 km",
+      "fixedSite": "Up to 2.5 km",
+      "airborne": "Up to 8 km"
+    },
+    "deploymentTypes": ["Handheld", "Man-portable", "Vehicular", "Fixed-site", "Airborne"],
+    "mobilityClasses": ["Individual carried", "Backpack", "Vehicle-mobile", "Fixed installation", "Aircraft-dependent"]
+  },
+  "useCaseScenarios": {
+    "tacticalDefense": {
+      "description": "Individual soldier or small unit protection against drone threats",
+      "recommendedProducts": ["DroneBuster", "PhantomNet Disruptor"],
+      "keyRequirements": ["Portability", "Quick deployment", "Real-time operation"]
+    },
+    "convoyProtection": {
+      "description": "Mobile column protection during movement operations",
+      "recommendedProducts": ["SilentGuardian EW-300", "StormShield Mobile EW Suite"],
+      "keyRequirements": ["Vehicular integration", "360-degree coverage", "Mobile operation"]
+    },
+    "baseDefense": {
+      "description": "Fixed installation protection of military bases and critical infrastructure",
+      "recommendedProducts": ["Wavebreaker Pro", "Roadrunner-M"],
+      "keyRequirements": ["Area coverage", "Persistent operation", "Infrastructure integration"]
+    },
+    "specialOperations": {
+      "description": "Covert operations requiring lightweight, rapidly deployable capabilities",
+      "recommendedProducts": ["PhantomNet Disruptor", "Beast+"],
+      "keyRequirements": ["Lightweight", "Low signature", "Flexible deployment"]
+    },
+    "airborneOperations": {
+      "description": "Helicopter or UAV-based electronic warfare operations",
+      "recommendedProducts": ["SpectrumHawk X7"],
+      "keyRequirements": ["Airborne compatible", "Lightweight", "High altitude operation"]
+    }
+  },
+  "searchIndex": {
+    "byCapability": {
+      "detection": ["DroneBuster", "Beast+", "SilentGuardian EW-300", "PhantomNet Disruptor", "Wavebreaker Pro", "SpectrumHawk X7", "StormShield Mobile EW Suite"],
+      "jamming": ["Beast+", "SilentGuardian EW-300", "PhantomNet Disruptor", "Wavebreaker Pro", "SpectrumHawk X7", "StormShield Mobile EW Suite"],
+      "interception": ["Roadrunner-M"],
+      "directionFinding": ["Beast+", "PhantomNet Disruptor"],
+      "gnssSpoofing": ["DroneBuster", "SilentGuardian EW-300"],
+      "autonomous": ["Roadrunner-M", "SilentGuardian EW-300", "StormShield Mobile EW Suite"]
+    },
+    "byPlatform": {
+      "handheld": ["DroneBuster"],
+      "manPortable": ["Beast+", "PhantomNet Disruptor"],
+      "vehicular": ["SilentGuardian EW-300", "StormShield Mobile EW Suite"],
+      "fixedSite": ["Wavebreaker Pro"],
+      "airborne": ["SpectrumHawk X7"],
+      "groundBased": ["Roadrunner-M"]
+    },
+    "byThreatType": {
+      "drones": ["Roadrunner-M", "DroneBuster", "SilentGuardian EW-300", "Wavebreaker Pro", "SpectrumHawk X7"],
+      "communications": ["Beast+", "SilentGuardian EW-300", "PhantomNet Disruptor", "Wavebreaker Pro", "SpectrumHawk X7", "StormShield Mobile EW Suite"],
+      "radar": ["SpectrumHawk X7", "StormShield Mobile EW Suite"],
+      "cruiseMissiles": ["Roadrunner-M"],
+      "aircraft": ["Roadrunner-M"]
+    }
+  }
+}

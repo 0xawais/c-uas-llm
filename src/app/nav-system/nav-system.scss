@@ -35,12 +35,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  
+  gap: 20px;
+
   .title-area {
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
   }
 
   h1 {
@@ -83,6 +89,39 @@
       background: #d4a017;
       border-color: #d4a017;
       transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  .chatbot-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 2px solid #2563eb;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+
+    svg {
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+      border-color: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
     }
 
     &:active {

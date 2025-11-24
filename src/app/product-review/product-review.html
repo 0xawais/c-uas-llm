@@ -9,55 +9,54 @@
         <!-- AI Summary and Review Product Buttons -->
         <div class="action-buttons-container">
           <!-- AI Summary Button -->
-          <div class="ai-summary-button-container">
-            <button 
-              class="generate-summary-btn" 
-              (click)="generateReviewSummary()" 
-              [disabled]="isGeneratingSummary"
-              *ngIf="!showSummary">
-              <svg *ngIf="!isGeneratingSummary" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-              <div *ngIf="isGeneratingSummary" class="loading-spinner"></div>
-              <span>{{ isGeneratingSummary ? 'Generating...' : 'AI Summary' }}</span>
-            </button>
+          <button 
+            class="generate-summary-btn" 
+            (click)="generateReviewSummary()" 
+            [disabled]="isGeneratingSummary"
+            *ngIf="!showSummary">
+            <svg *ngIf="!isGeneratingSummary" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <div *ngIf="isGeneratingSummary" class="loading-spinner"></div>
+            <span>{{ isGeneratingSummary ? 'Generating...' : 'AI Summary' }}</span>
+          </button>
 
-            <button 
-              class="toggle-summary-btn" 
-              (click)="toggleSummary()" 
-              *ngIf="showSummary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/>
-              </svg>
-              <span>{{ showSummary ? 'Hide Summary' : 'Show Summary' }}</span>
-            </button>
-          </div>
+          <button 
+            class="toggle-summary-btn" 
+            (click)="toggleSummary()" 
+            *ngIf="showSummary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/>
+            </svg>
+            <span>{{ showSummary ? 'Hide Summary' : 'Show Summary' }}</span>
+          </button>
 
           <!-- Review Product Button -->
-          <div class="review-product-button-container">
-            <button 
-              class="review-product-btn" 
-              (click)="toggleReviewForm()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-              </svg>
-              <span>Review Product</span>
-            </button>
-          </div>
+          <button 
+            class="review-product-btn" 
+            (click)="toggleReviewForm()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            </svg>
+            <span>Review Product</span>
+          </button>
         </div>
         
-        <div class="overall-rating-badge">
-          <div class="rating-value">{{ categoryRatings.overall }}</div>
-          <div class="stars">
-            <span *ngFor="let star of [1,2,3,4,5]" 
-                  [class.filled]="star <= categoryRatings.overall"
-                  [class.half]="star === Math.ceil(categoryRatings.overall) && categoryRatings.overall % 1 !== 0">
-              {{ star <= Math.floor(categoryRatings.overall) ? '★' : (star === Math.ceil(categoryRatings.overall) && categoryRatings.overall % 1 !== 0 ? '⯨' : '☆') }}
-            </span>
+        <div class="overall-rating-section">
+          <div class="rating-summary">
+            <div class="rating-score">
+              <span class="rating-number">{{ categoryRatings.overall }}</span>
+              <span class="rating-max">/5</span>
+            </div>
+            <div class="rating-stars">
+              <span *ngFor="let star of [1,2,3,4,5]"
+                    [class.filled]="star <= categoryRatings.overall"
+                    [class.half]="star === Math.ceil(categoryRatings.overall) && categoryRatings.overall % 1 !== 0">
+                {{ star <= Math.floor(categoryRatings.overall) ? '★' : (star === Math.ceil(categoryRatings.overall) && categoryRatings.overall % 1 !== 0 ? '⯨' : '☆') }}
+              </span>
+            </div>
           </div>
-          <div class="rating-details">Overall Rating</div>
-          <div class="review-count">{{ categoryRatings.count }} reviews</div>
         </div>
 
         <!-- AI Summary Display Section -->
@@ -72,7 +71,26 @@
               </svg>
             </button>
           </div>
-          <p class="summary-text">{{ reviewSummary }}</p>
+          <p class="summary-text" [innerHTML]="reviewSummary | markdownToHtml"></p>
+
+          <!-- Detailed Analysis Button -->
+          <div class="detailed-analysis-section" *ngIf="!showDetailed">
+            <button class="detailed-btn" (click)="generateDetailedReviewSummary()" [disabled]="isGeneratingDetailed">
+              <svg *ngIf="!isGeneratingDetailed" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z"/>
+                <path d="M19 15L19.83 18.83L23 19L19.83 19.17L19 23L18.17 19.17L15 19L18.17 18.83L19 15Z"/>
+                <path d="M8 7L8.5 9.5L11 10L8.5 10.5L8 13L7.5 10.5L5 10L7.5 9.5L8 7Z"/>
+              </svg>
+              <div *ngIf="isGeneratingDetailed" class="loading-spinner"></div>
+              <span>{{ isGeneratingDetailed ? 'Generating...' : 'View Detailed Analysis' }}</span>
+            </button>
+          </div>
+
+          <!-- Detailed Summary Display -->
+          <div class="detailed-summary-section" *ngIf="showDetailed">
+            <h5>Detailed Analysis</h5>
+            <p class="summary-text" [innerHTML]="detailedSummary | markdownToHtml"></p>
+          </div>
         </div>
       </div>
       <div class="product-info">
@@ -94,79 +112,121 @@
     <!-- Right: Category Ratings -->
     <div class="category-ratings-section">
       <h2>Average Ratings by Category</h2>
-      
-      <div class="category-rating-card">
-        <div class="category-header">
-          <h3>Transportability & Mobility</h3>
-          <span class="rating-score">{{ categoryRatings.transportability }}/5</span>
+
+      <!-- Transportability Card -->
+      <div class="category-card">
+        <div class="category-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7"/>
+            <path d="M3 7L12 13L21 7"/>
+            <path d="M12 13V19"/>
+          </svg>
         </div>
-        <p class="category-description">Ease of deployment, movement, and setup in various operational environments</p>
-        <div class="stars">
-          <span *ngFor="let star of [1,2,3,4,5]" 
-                [class.filled]="star <= categoryRatings.transportability"
-                [class.half]="star === Math.ceil(categoryRatings.transportability) && categoryRatings.transportability % 1 !== 0">
-            {{ star <= Math.floor(categoryRatings.transportability) ? '★' : (star === Math.ceil(categoryRatings.transportability) && categoryRatings.transportability % 1 !== 0 ? '⯨' : '☆') }}
-          </span>
+        <div class="category-content">
+          <div class="category-header">
+            <h3>Transportability & Mobility</h3>
+            <div class="rating-display">
+              <span class="rating-number">{{ categoryRatings.transportability }}</span>
+              <span class="rating-max">/5</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="(categoryRatings.transportability / 5) * 100"></div>
+          </div>
+          <p class="category-description">Ease of deployment, movement, and setup in various operational environments</p>
         </div>
       </div>
 
-      <div class="category-rating-card">
-        <div class="category-header">
-          <h3>Ease of Use</h3>
-          <span class="rating-score">{{ categoryRatings.easeOfUse }}/5</span>
+      <!-- Ease of Use Card -->
+      <div class="category-card">
+        <div class="category-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9 12L11 14L15 10"/>
+          </svg>
         </div>
-        <p class="category-description">User interface intuitiveness, training requirements, and operator friendliness</p>
-        <div class="stars">
-          <span *ngFor="let star of [1,2,3,4,5]" 
-                [class.filled]="star <= categoryRatings.easeOfUse"
-                [class.half]="star === Math.ceil(categoryRatings.easeOfUse) && categoryRatings.easeOfUse % 1 !== 0">
-            {{ star <= Math.floor(categoryRatings.easeOfUse) ? '★' : (star === Math.ceil(categoryRatings.easeOfUse) && categoryRatings.easeOfUse % 1 !== 0 ? '⯨' : '☆') }}
-          </span>
-        </div>
-      </div>
-
-      <div class="category-rating-card">
-        <div class="category-header">
-          <h3>Interoperability</h3>
-          <span class="rating-score">{{ categoryRatings.interoperability }}/5</span>
-        </div>
-        <p class="category-description">Integration capacity with existing command and control systems</p>
-        <div class="stars">
-          <span *ngFor="let star of [1,2,3,4,5]" 
-                [class.filled]="star <= categoryRatings.interoperability"
-                [class.half]="star === Math.ceil(categoryRatings.interoperability) && categoryRatings.interoperability % 1 !== 0">
-            {{ star <= Math.floor(categoryRatings.interoperability) ? '★' : (star === Math.ceil(categoryRatings.interoperability) && categoryRatings.interoperability % 1 !== 0 ? '⯨' : '☆') }}
-          </span>
+        <div class="category-content">
+          <div class="category-header">
+            <h3>Ease of Use</h3>
+            <div class="rating-display">
+              <span class="rating-number">{{ categoryRatings.easeOfUse }}</span>
+              <span class="rating-max">/5</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="(categoryRatings.easeOfUse / 5) * 100"></div>
+          </div>
+          <p class="category-description">User interface intuitiveness, training requirements, and operator friendliness</p>
         </div>
       </div>
 
-      <div class="category-rating-card">
-        <div class="category-header">
-          <h3>Detection & Effectiveness</h3>
-          <span class="rating-score">{{ categoryRatings.detection }}/5</span>
+      <!-- Interoperability Card -->
+      <div class="category-card">
+        <div class="category-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 12L11 14L15 10"/>
+            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/>
+            <path d="M9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z"/>
+          </svg>
         </div>
-        <p class="category-description">System's capability in detecting and responding to threats</p>
-        <div class="stars">
-          <span *ngFor="let star of [1,2,3,4,5]" 
-                [class.filled]="star <= categoryRatings.detection"
-                [class.half]="star === Math.ceil(categoryRatings.detection) && categoryRatings.detection % 1 !== 0">
-            {{ star <= Math.floor(categoryRatings.detection) ? '★' : (star === Math.ceil(categoryRatings.detection) && categoryRatings.detection % 1 !== 0 ? '⯨' : '☆') }}
-          </span>
+        <div class="category-content">
+          <div class="category-header">
+            <h3>Interoperability</h3>
+            <div class="rating-display">
+              <span class="rating-number">{{ categoryRatings.interoperability }}</span>
+              <span class="rating-max">/5</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="(categoryRatings.interoperability / 5) * 100"></div>
+          </div>
+          <p class="category-description">Integration capacity with existing command and control systems</p>
         </div>
       </div>
 
-      <div class="category-rating-card">
-        <div class="category-header">
-          <h3>System Reliability</h3>
-          <span class="rating-score">{{ categoryRatings.reliability }}/5</span>
+      <!-- Detection Card -->
+      <div class="category-card">
+        <div class="category-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/>
+            <circle cx="12" cy="12" r="6"/>
+            <path d="M12 8V12L14 14"/>
+          </svg>
         </div>
-        <p class="category-description">Consistency of performance and uptime in operational conditions</p>
-        <div class="stars">
-          <span *ngFor="let star of [1,2,3,4,5]" 
-                [class.filled]="star <= categoryRatings.reliability"
-                [class.half]="star === Math.ceil(categoryRatings.reliability) && categoryRatings.reliability % 1 !== 0">
-            {{ star <= Math.floor(categoryRatings.reliability) ? '★' : (star === Math.ceil(categoryRatings.reliability) && categoryRatings.reliability % 1 !== 0 ? '⯨' : '☆') }}
-          </span>
+        <div class="category-content">
+          <div class="category-header">
+            <h3>Detection & Effectiveness</h3>
+            <div class="rating-display">
+              <span class="rating-number">{{ categoryRatings.detection }}</span>
+              <span class="rating-max">/5</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="(categoryRatings.detection / 5) * 100"></div>
+          </div>
+          <p class="category-description">System's capability in detecting and responding to threats</p>
+        </div>
+      </div>
+
+      <!-- Reliability Card -->
+      <div class="category-card">
+        <div class="category-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
+          </svg>
+        </div>
+        <div class="category-content">
+          <div class="category-header">
+            <h3>System Reliability</h3>
+            <div class="rating-display">
+              <span class="rating-number">{{ categoryRatings.reliability }}</span>
+              <span class="rating-max">/5</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="(categoryRatings.reliability / 5) * 100"></div>
+          </div>
+          <p class="category-description">Consistency of performance and uptime in operational conditions</p>
         </div>
       </div>
     </div>

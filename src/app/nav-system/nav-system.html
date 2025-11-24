@@ -11,13 +11,23 @@
       <h1>H4D - Tartans 4 Defense</h1>
       <h2>Counter-UAS Equipment Assessment Database</h2>
     </div>
-    <a routerLink="/admin" [queryParams]="{tab: 'add-product'}" class="add-product-btn" *ngIf="authService.isAdmin()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="5" x2="12" y2="19"></line>
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-      </svg>
-      <span>Add New System</span>
-    </a>
+    <div class="header-actions">
+      <a routerLink="/chatbot" class="chatbot-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z"/>
+          <path d="M19 15L19.83 18.83L23 19L19.83 19.17L19 23L18.17 19.17L15 19L18.17 18.83L19 15Z"/>
+          <path d="M8 7L8.5 9.5L11 10L8.5 10.5L8 13L7.5 10.5L5 10L7.5 9.5L8 7Z"/>
+        </svg>
+        <span>AI Assistant</span>
+      </a>
+      <a routerLink="/admin" [queryParams]="{tab: 'add-product'}" class="add-product-btn" *ngIf="authService.isAdmin()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+        <span>Add New System</span>
+      </a>
+    </div>
   </div>
 
   <div class="products-grid">
