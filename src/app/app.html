@@ -1,0 +1,5 @@
+<app-header *ngIf="!isLoginPage()"></app-header>
+<router-outlet></router-outlet>
+<div class="bottom-button-container" *ngIf="!isLoginPage()">
+  <button class="review-product-btn" (click)="openReviewForm()">Review Product</button>
+</div>

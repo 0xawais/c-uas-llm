@@ -1,0 +1,66 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="dod-header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 100 100" fill="none">
+        <rect x="5" y="5" width="90" height="90" fill="#C41230" rx="4"/>
+        <text x="50" y="45" font-family="serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">CMU</text>
+        <text x="50" y="70" font-family="serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">TARTANS</text>
+      </svg>
+    </div>
+    <h1>H4D - Tartans 4 Defense</h1>
+    <p class="subtitle">Counter-UAS Equipment Assessment Portal</p>
+    <div class="classification-label">FOR DEMO & MVP PURPOSES</div>
+    <div class="mvp-notice">
+      ⚠️ This is not a real website. It is for H4D MVP demonstration purposes only.
+    </div>
+
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="email">Military Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="credentials.email"
+          required
+          class="form-control"
+          placeholder="name@example.mil">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="credentials.password"
+          required
+          class="form-control"
+          placeholder="Enter your password">
+      </div>
+
+      <div class="error-message" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </div>
+
+      <button type="submit" [disabled]="!loginForm.valid" class="login-btn">
+        Sign In
+      </button>
+    </form>
+
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <button class="cac-btn" (click)="signInWithCAC()">
+      <span class="cac-icon">🪪</span>
+      Sign in with CAC
+    </button>
+
+    <div class="footer-links">
+      <a href="#" class="link">Forgot Password?</a>
+      <span class="separator">•</span>
+      <a href="#" class="link">Request Access</a>
+    </div>
+  </div>
+</div>
